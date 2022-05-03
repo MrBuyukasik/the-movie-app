@@ -1,8 +1,6 @@
-import React, { FunctionComponent, useEffect, useState } from 'react';
+import React, {FunctionComponent, useEffect, useState} from 'react';
 
-import { StyleSheet, Text, View, Alert } from 'react-native';
-
-import SplashScreen from 'react-native-splash-screen';
+import {StyleSheet, Text, View, Alert} from 'react-native';
 
 import DiscoverProvider from '../../../network-operations/discover/discover.provider';
 
@@ -11,11 +9,11 @@ import {
   IDiscoverMovieSuccess,
 } from '../../../network-operations/discover/discover.interface';
 
-import { SearchBar, SimpleMovieList } from '../../components';
+import {SearchBar, SimpleMovieList} from '../../components';
 import paths from '../../navigation/paths';
 import colors from '../../constants/colors';
 
-const Home: FunctionComponent<{}> = ({ navigation }) => {
+const Home: FunctionComponent<{}> = ({navigation}) => {
   const [popularMovies, setPopulerMovies] = useState<IDiscoverDomain[]>([]);
   const [isLoadingPopularMovies, setIsLoadingPopularMovies] =
     useState<boolean>(true);
@@ -23,24 +21,22 @@ const Home: FunctionComponent<{}> = ({ navigation }) => {
   const [upcomingMovies, setUpcomingMovies] = useState<IDiscoverDomain[]>([]);
 
   const fetchMovies = async () => {
-    const { ok, data } = await DiscoverProvider.discoverMovies();
+    const {ok, data} = await DiscoverProvider.discoverMovies();
 
     if (ok) {
-      const { results } = data as IDiscoverMovieSuccess;
+      const {results} = data as IDiscoverMovieSuccess;
       setPopulerMovies(results);
       setIsLoadingPopularMovies(false);
     } else {
       Alert.alert('Error', 'Error Fetching Movies');
     }
-
-    SplashScreen.hide();
   };
 
   const fetchUpcomingMovies = async () => {
-    const { ok, data } = await DiscoverProvider.getUpcomingMovies();
+    const {ok, data} = await DiscoverProvider.getUpcomingMovies();
 
     if (ok) {
-      const { results } = data as IDiscoverMovieSuccess;
+      const {results} = data as IDiscoverMovieSuccess;
       setUpcomingMovies(results);
       setIsLoadingPopularMovies(false);
     } else {
@@ -49,7 +45,7 @@ const Home: FunctionComponent<{}> = ({ navigation }) => {
   };
 
   const onSelectMovie = async (movie: IDiscoverDomain) => {
-    navigation.navigate(paths.MOVIE_DETAILS, { selectedMovie: movie });
+    navigation.navigate(paths.MOVIE_DETAILS, {selectedMovie: movie});
   };
 
   useEffect(() => {
