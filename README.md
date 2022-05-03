@@ -1,4 +1,4 @@
-# the-movie-app
+# themovieapp
 
 ## Available Scripts
 
