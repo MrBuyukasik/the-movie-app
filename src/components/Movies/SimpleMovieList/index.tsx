@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import colors from '../../../constants/colors';
 
-import { IDiscoverDomain } from '../../../../sdk/discover/discover.interface';
+import { IDiscoverDomain } from '../../../../network-operations/discover/discover.interface';
 
 import SimpleMovieBox from '../SimpleMovie';
 

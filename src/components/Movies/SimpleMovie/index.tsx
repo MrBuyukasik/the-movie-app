@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import {View as AnimatedView} from 'react-native-animatable';
 
-import {IDiscoverDomain} from '../../../../sdk/discover/discover.interface';
+import {IDiscoverDomain} from '../../../../network-operations/discover/discover.interface';
 
 import colors from '../../../constants/colors';
 

@@ -5,10 +5,10 @@ import {StyleSheet, View, StatusBar, Alert} from 'react-native';
 import colors from '../../../constants/colors';
 
 import {IStatusBarProps} from '../interfaces/status-bar';
-import DiscoverProvider from '../../../../sdk/discover/discover.provider';
+import DiscoverProvider from '../../../../network-operations/discover/discover.provider';
 
 import {SearchInput} from '../../Inputs';
-import {IDiscoverMovieSuccess} from '../../../../sdk/discover/discover.interface';
+import {IDiscoverMovieSuccess} from '../../../../network-operations/discover/discover.interface';
 
 interface ISearchBarProps extends IStatusBarProps {}
 

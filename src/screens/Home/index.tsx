@@ -4,12 +4,12 @@ import { StyleSheet, Text, View, Alert } from 'react-native';
 
 import SplashScreen from 'react-native-splash-screen';
 
-import DiscoverProvider from '../../../sdk/discover/discover.provider';
+import DiscoverProvider from '../../../network-operations/discover/discover.provider';
 
 import {
   IDiscoverDomain,
   IDiscoverMovieSuccess,
-} from '../../../sdk/discover/discover.interface';
+} from '../../../network-operations/discover/discover.interface';
 
 import { SearchBar, SimpleMovieList } from '../../components';
 import paths from '../../navigation/paths';
