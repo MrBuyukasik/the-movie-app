@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   moviePoster: {
     borderTopLeftRadius: 4,
     borderTopRightRadius: 4,
-    height: 300,
+    height: 250,
     width: Dimensions.get('screen').width,
   },
   titles: {
