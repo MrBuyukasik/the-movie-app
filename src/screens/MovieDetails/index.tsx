@@ -9,10 +9,8 @@ import {
 } from 'react-native';
 import colors from '../../constants/colors';
 import Config from '../../../config';
-const MovieDetails = ({route}) => {
-  const {selectedMovie} = route?.params;
-  console.log(selectedMovie);
-  console.log(`${Config.MOVIE_DB_IMG_URL}/w500/${selectedMovie?.poster_path}`);
+const MovieDetails = ({ route }) => {
+  const { selectedMovie } = route?.params;
   return (
     <View style={styles.container}>
       <Image
